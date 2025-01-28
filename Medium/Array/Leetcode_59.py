@@ -19,12 +19,12 @@ class Solution(object):
                 row.append(0)
             matrix.append(row)
             # which basically makes if n is equal to 4
-            [
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0],
-                [0, 0, 0, 0]
-            ]
+            # [
+            #     [0, 0, 0, 0],
+            #     [0, 0, 0, 0],
+            #     [0, 0, 0, 0],
+            #     [0, 0, 0, 0]
+            # ]
         left=0
         right=n-1
         top=0
