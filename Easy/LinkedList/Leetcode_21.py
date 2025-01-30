@@ -39,4 +39,6 @@ class Solution(object):
         elif list2:
             current.next=list2
         return dummy.next
+    
+    
 
