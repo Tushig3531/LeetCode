@@ -15,8 +15,8 @@
 # Input: digits = "2"
 # Output: ["a","b","c"]
 
-class Solution(object):
-    def letterCombinations(self, digits):
+
+def letterCombinations(digits):
         """
         :type digits: str
         :rtype: List[str]
@@ -28,14 +28,18 @@ class Solution(object):
             "4":"ghi","5":"jkl","6":"mno",
             "7":"pqrs","8":"tuv","9":"wxyz"
         }
-        combination=[""] #it should start with empty
-
-        for digit in digits: #2,3
-            letters=keys[digit] #Letters in 2 and 3
-            new_combination=[] #making new combination
-            for base in combination: #making the base: ""
-                for letter in letters: #a,b,c,d,e,f
-                    new_combination.append(base+letter) #"ad","ae","af","bd","be","bf","cd","ce","cf"
-            combination=new_combination
-        return combination
+        result=[]
+        def backtrack(utga,husnegt):
+            if utga==len(digits): #if the length of digits are equal to index
+                result.append("".join(husnegt)) #we gonna append the path in to the result
+                return
+            possible_letters=keys[digits[utga]] #possible_letters are the keys of digits' index
+            for letter in possible_letters: #looping those possible_letters
+                husnegt.append(letter) #inserting those letters in path
+                backtrack(utga+1,husnegt) #Then moves to the next index
+                husnegt.pop() #Then takes the path
+        backtrack(0,[]) #initial 
+        return result
+digits="23"
+print(letterCombinations(digits))        
 
