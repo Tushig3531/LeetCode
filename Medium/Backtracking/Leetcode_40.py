@@ -25,22 +25,22 @@ def combinationSum2(candidates, target):
         :type target: int
         :rtype: List[List[int]]
         """
-        candidates.sort()
+        candidates.sort() #sort the candidates
         result=[]
-        def backtrack(remain,combination,start):
+        def backtrack(remain,combination,start): #The concept is If I substract the index from the remaining over and over again it will give me the whole combinations of the candidates
             if remain==0:
-                result.append(list(combination))
+                result.append(list(combination)) #list those combinations
                 return
-            if remain<0:
+            if remain<0: #If the remaining is still bigger than the remaining it should loop the process again
                 return
-            for i in range(start,len(candidates)):
-                if i > start and candidates[i] == candidates[i - 1]:
-                    continue
-                combination.append(candidates[i])
-                backtrack(remain-candidates[i],combination,i+1)
-                combination.pop()
-        backtrack(target,[],0)
-        return result
+            for i in range(start,len(candidates)): #loop between the 0 to the length of the candidates
+                if i > start and candidates[i] == candidates[i - 1]: #If the index is bigger than the start and the i-th candidate is equal to i-1-th candidate
+                    continue #it should continue
+                combination.append(candidates[i]) #else, put those candidates in the combination list
+                backtrack(remain-candidates[i],combination,i+1) #Then it changes the remaining, and recursively. i+1 means it can not take the same value. 
+                combination.pop() #takes the combinations
+        backtrack(target,[],0) #Where it should start
+        return result #result
                     
                 
             

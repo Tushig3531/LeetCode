@@ -21,8 +21,8 @@ def combinationSum(candidates, target):
         :type target: int
         :rtype: List[List[int]]
         """
-        result=[]
-        def backtrack(remain, combination, start):
+        result=[] 
+        def backtrack(remain, combination, start): #it basically same as the leetcode_40 but it can take multiple of same candidates
             if remain==0:
                 result.append(list(combination))
                 return 
@@ -30,15 +30,11 @@ def combinationSum(candidates, target):
                 return
             for i in range(start,len(candidates)):
                 combination.append(candidates[i])
-                backtrack(remain-candidates[i],combination,i)
+                backtrack(remain-candidates[i],combination,i) #the start of i makes this whole process working to take the same candidate over and over again
                 combination.pop()
         backtrack(target,[],0)
         return result
                 
-                
-                
-            
-        
         
 candidates=[2,3,6,7]
 target=7
