@@ -37,7 +37,7 @@ def letterCombinations(digits):
             for letter in possible_letters: #looping those possible_letters
                 husnegt.append(letter) #inserting those letters in path
                 backtrack(utga+1,husnegt) #Then moves to the next index
-                husnegt.pop() #Then takes the path
+                husnegt.pop()
         backtrack(0,[]) #initial 
         return result
 digits="23"
