@@ -14,12 +14,12 @@ def combine(n, k):
     result=[]
     def backtrack(start,combination):
         if len(combination)==k: #base case
-            result.append(combination[:])
+            result.append(list(combination))
             return
         for i in range(start,n+1): #looping from the start to the end
             combination.append(i) 
             backtrack(i+1,combination) #recursively call backtrack, and the start-->i+1 because we want the element that is bigger than the first element
-            combination.pop()
+            combination.pop() #Takes off the afterwards 
     backtrack(1,[])
     return result
 n=4
