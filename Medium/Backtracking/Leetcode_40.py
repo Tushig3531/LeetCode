@@ -38,7 +38,7 @@ def combinationSum2(candidates, target):
                     continue #it should continue
                 combination.append(candidates[i]) #else, put those candidates in the combination list
                 backtrack(remain-candidates[i],combination,i+1) #Then it changes the remaining, and recursively. i+1 means it can not take the same value. 
-                combination.pop() #takes the combinations
+                combination.pop() 
         backtrack(target,[],0) #Where it should start
         return result #result
                     
