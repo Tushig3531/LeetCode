@@ -39,12 +39,12 @@ def threeSum(nums):
                     result.append([nums[i],nums[left],nums[right]]) #append the value in the list
                     while left<right and nums[left]==nums[left+1]: #if the left is less than the right and nums of left and left+1 are equal
                         left+=1 #left moves to the next index which avoid the duplicates
-                    left+=1
-                    right-=1    
-                elif current_sum<target:
+                    left+=1 #then moves left moves to the left+1
+                    right-=1 #and right moves back by 1
+                elif current_sum<target: #if sum is less then the target left will move by 1
                     left+=1
                 else:
-                    right-=1
+                    right-=1 #if current is greater than the target, right will move down by 1
         return result 
 nums=[-1,0,1,2,-1,-4]
 print(threeSum(nums))
