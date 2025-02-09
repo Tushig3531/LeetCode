@@ -26,14 +26,14 @@ def threeSumClosest(nums, target):
         """
         nums.sort()
         n=len(nums)
-        closed_sum=float('inf')
-
+        closed_sum=float('inf') #initializing the closed_sum to large numbers
+# The rest process is kinda similar to leetcode_15 but.
         for i in range(n-2):
             left=i+1
             right=n-1
             while left<right:
                 current_sum=nums[i]+nums[left]+nums[right]
-                if abs(current_sum-target)<abs(closed_sum-target):
+                if abs(current_sum-target)<abs(closed_sum-target): #When the current target minus target is less than clused_sum minus target current sum will be our closed sum.
                     closed_sum=current_sum
                 if current_sum<target:
                     left+=1
@@ -43,8 +43,8 @@ def threeSumClosest(nums, target):
                     return current_sum
         return closed_sum
                     
-nums=[-1,2,1,-4]
-target=1
+nums=[-1,2,1,-4,10]
+target=7
 
 print(threeSumClosest(nums,target))
         
