@@ -1,0 +1,49 @@
+[-1,0,1,2,-1,-4]
+
+
+after sort [-4,-1,-1,0,1,2] 
+
+ehni pointer i-th index
+2doh pointer j-th index
+
+1) -4
+2) -1
+3) -1
+4) 0
+5) 1
+6) 2
+
+-4+(-1)=-5
+search if the 5 is in the List
+
+i1)-4
+i2)-1
+i3)-1
+i4)0
+i5)1
+i6)2
+for i in range(n-2)  
+
+i1)-4
+i2)-1
+i3)-1
+i4)0
+
+ehniih -4
+2doh -1
+suuliinh 2
+
+-4,-1,2= -3 !=0
+
+ehniih -1
+2doh -1
+suulinh 2
+
+
+
+
+
+
+
+
+
