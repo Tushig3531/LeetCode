@@ -26,6 +26,3 @@ def partition(s):
             
 s="aab"
 print(partition(s))
-
-# aab
-# 

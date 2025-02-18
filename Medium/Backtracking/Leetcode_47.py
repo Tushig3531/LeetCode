@@ -26,7 +26,6 @@ def permuteUnique(nums):
                     continue #skip it. Basically, if the number is already listed, it can not take that value. Instead it will skip it
                 new_remain=remain[:i]+remain[i+1:] #the new_remain aka new nums will become. The numbers till the i-th index of remain + number from i+1'th index to end of the remain 
                 backtrack(new_remain,combination+[remain[i]]) #recursion, changes the remaining with new_remain and the combination will take the remain's i-th index that we took.
-                
         backtrack(nums,[]) #init
         return result
             
