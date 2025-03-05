@@ -25,11 +25,11 @@ def maxArea(height):
             final_area=max(area_of_water,final_area) #it takes the max of the new areas and old areas
 
             if height[L]>height[R]: #moving index
-                R=-1
+                R-=1
             else:
-                L=+1
+                L+=1
         return final_area
         
         
-height=[1,8,6,2,5,4,8,3,7]
+height=[4,3,2,1,4]
 print(maxArea(height))
