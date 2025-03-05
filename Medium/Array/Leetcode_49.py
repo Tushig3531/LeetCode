@@ -12,14 +12,18 @@ def groupAnagrams(strs):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        group=defaultdict(list) 
-        for i in strs:
-            key=[0]*26
-            for j in i:
-                key[ord(j)-ord("a")]+=1
-            key=tuple(key)
-            group[key].append(i)
-        return group.values()
+        group=defaultdict(list) #this is the init group list dictionary
+        for i in strs: #looping until the strs are finished
+            key=[0]*26 #because of english letter has 26 letters, it must be one of them
+            for j in i: #then looping the each i, for example, "eat --> e,a,t"
+                key[ord(j)-ord("a")]+=1 #1) key[4]+1-->5
+                # 2) key[0]+1-->1
+                #3) key[19]+1-->20
+                #This function identifies the key of the char's position
+            key=tuple(key) #key-->[5,1,20]
+            group[key].append(i) #and then append the keys in the key list of the group
+        return group.values() #and return the value of it. 
         
 strs = ["eat","tea","tan","ate","nat","bat"]       
 print(groupAnagrams(strs))
+

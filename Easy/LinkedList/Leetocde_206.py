@@ -9,20 +9,3 @@
 # Input: head = []
 # Output: []
 # Definition for singly-linked list.
-class ListNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-    def reverseList(head):
-        """
-        :type head: Optional[ListNode]
-        :rtype: Optional[ListNode]
-        """
-        daraagin_node=ListNode(head=next)
-        previous=None
-        current=head
-        while current:
-            current.next=previous
-            previous=current
-            current.next_node
-            
