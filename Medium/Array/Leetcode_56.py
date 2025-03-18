@@ -28,6 +28,5 @@ def merge(intervals):
         
         return result
             
-
 intervals = [[1,3],[2,6],[8,10],[15,18]]
 print(merge(intervals))
