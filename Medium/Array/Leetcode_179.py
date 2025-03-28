@@ -30,10 +30,11 @@ def largestNumber(nums):
         def sort_key(s):
             return s*max_len
         sorted_list=sorted(nums_str,key=sort_key,reverse=True)
+        if sorted_list[0] == "0":
+            result = "0"
         # print(sorted_list)
-        result="".join(sorted_list)
-        if result=="00":
-            return "0"
+        else:
+            result="".join(sorted_list)
         return result
         
         
