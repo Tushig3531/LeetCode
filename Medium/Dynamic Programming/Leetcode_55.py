@@ -14,12 +14,15 @@ def canJump(nums):
         :type nums: List[int]
         :rtype: bool
         """
-        jumps=0
-        current=0
         far=0
-        for i in range(len(nums)-1):
-            far=max(far,i+nums[i])
-        print(far)
+        n=len(nums)
+        for index in range(n):
+            if index>far:
+                return False
+            far=max(far,index+nums[index])
+            if far>=len(nums)-1:
+                return True
+        return False
             
 
 
