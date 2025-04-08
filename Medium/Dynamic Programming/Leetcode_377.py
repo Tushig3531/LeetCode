@@ -64,6 +64,8 @@ def combinationSum4(nums, target):
         # when num==2, dynamic[4]=4+dynamic[4-2], dynamic[4]=6
         # when num==3, dynamic[4]=6+dynamic[1], dynamic[4]=7
         # [1,1,2,4,7]
+        
+        # In the end it is returning the value of target, dynamic[target]-->dynamic[4]-->7
                     
             
         

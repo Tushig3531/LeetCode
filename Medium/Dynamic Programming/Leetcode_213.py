@@ -20,7 +20,10 @@ def rob(nums):
         :type nums: List[int]
         :rtype: int
         """
-        
+        if not nums:
+            return 0
+        if len(nums)==1:
+            return nums[0]
         def hulgai(houses):
             previous=0
             current=0
