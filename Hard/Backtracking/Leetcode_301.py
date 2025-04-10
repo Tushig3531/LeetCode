@@ -40,7 +40,6 @@ def removeInvalidParentheses(s):
             if index==')' and right>0:
                 backtrack(start+1,left,right-1,open_count,combination)
             
-            
             path=combination+index
             if index=="(":
                 backtrack(start+1,left,right,open_count+1,path)
