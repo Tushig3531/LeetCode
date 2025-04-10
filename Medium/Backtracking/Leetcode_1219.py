@@ -30,8 +30,6 @@ def getMaximumGold(grid):
         :type grid: List[List[int]]
         :rtype: int
         """
-        if not grid or not grid[0]:
-            return 0
         
         rows=len(grid)
         columns=len(grid[0])

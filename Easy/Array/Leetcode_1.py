@@ -11,14 +11,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        hashmap={}
-        for i in range(len(nums)):
-            hashmap[nums[i]]=i
-        for i in range(len(nums)):
-            comp=target-nums[i]
-            if comp in hashmap and hashmap[comp] !=i:
-                return [i, hashmap[comp]]
-        return []
+        hashmap={} #too: index
+        for i, n in enumerate(nums):
+            zoruu=target-n
+            if zoruu in hashmap:
+                return [hashmap[zoruu],i]
+            hashmap[n]=i
+        return 
     
 # In this code, For example "[2,7,11,15]". First we are creating hashmap which identifies the index of the array. 
 # In this case 2-->0 7-->1 11-->2 15-->3. Then I identified that adding two number is A+B=target, but we know that is "A"(because we are picking it first) and the target.
