@@ -24,6 +24,6 @@ def containsNearbyDuplicate(nums, k):
             hashmap[num]=i
         return False
         
-nums = [1,2,3,1,2,3]
+nums = [1,2,3]
 k = 2
 print(containsNearbyDuplicate(nums,k))
