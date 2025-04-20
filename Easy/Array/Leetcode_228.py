@@ -29,16 +29,18 @@ def summaryRanges(nums):
         result=[]
         if not nums:
             return result
-        start=nums[0]
-        for i in range(len(nums)):
-            if i==len(nums)-1 or nums[i+1]!=nums[i]+1:
-                if start==nums[i]:
-                    result.append(str(start))
-                else:
-                    result.append(f"{start}->{nums[i]}")
-                # if i!=len(nums)-1:
-                #     start=nums[i+1]
-        return result                
+        index=0
+        while index<len(nums):
+            start=nums[index]
+            while index<len(nums)-1 and nums[index]==nums[index+1]-1:
+                index+=1
+            end=nums[index]
+            if start==end:
+                result.append(str(start))
+            else:
+                result.append(str(start)+"->"+str(end))
+            index+=1
+        return result
                 
         
 nums = [0,1,2,4,5,7]
