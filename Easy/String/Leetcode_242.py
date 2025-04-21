@@ -33,6 +33,6 @@ def isAnagram(s, t):
         return False        
         
 
-s = "anagra"
+s = "anagram"
 t = "nagaram"
 print(isAnagram(s,t))
