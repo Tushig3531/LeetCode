@@ -16,11 +16,7 @@ def findErrorNums(nums):
         """
         hashmap={}
         for num in nums:
-            hashmap[num]=hashmap.get(num,0)+1
-        # return hashmap
-
-        # return hashmap.items()   
-        # for num, count 
+            hashmap[num]=hashmap.get(num,0)+1 
         duplicate=None
         for num, count in hashmap.items():
             if count==2:
