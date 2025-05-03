@@ -47,7 +47,7 @@ def getHint(secret, guess):
             if ch!=secret[i] and hashmap_sec.get(ch,0)>0:
                 cows+=1
                 hashmap_sec[ch]-=1
-        return f"{bulls}B{cows}A"
+        return str(bulls)+"A"+str(cows)+"B"
         
                 
         
