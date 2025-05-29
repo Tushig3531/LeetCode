@@ -17,11 +17,7 @@ def leastBricks(wall):
         :rtype: int
         """
         counts={}
-        for i in wall:
-            total_sum=0
-            for j in i:
-                total_sum=total_sum+j
-        # return total_sum
+    
         for row in wall:
             prefix=0
             for brick in row[:-1]:
